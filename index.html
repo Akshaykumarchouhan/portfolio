@@ -1,382 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Akshay kumar chouhan</div>
-      <div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Akshay Kumar Chouhan - B.Tech CSE at VFSTR. Full-Stack Developer, Quantum Tech enthusiast. Projects: Wishes App, IBM Quantum Dashboard, Doctor Appointment System, AI Agents." />
+  <meta name="keywords" content="Akshay Kumar Chouhan, portfolio, full-stack developer, React, Node.js, quantum computing, VFSTR, Guntur" />
+  <title>Akshay Kumar Chouhan | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+
+<body>
+  <a href="index.html#profile" class="skip-link">Skip to main content</a>
+  <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+    <span class="theme-icon sun" aria-hidden="true">☀️</span>
+    <span class="theme-icon moon" aria-hidden="true">🌙</span>
+  </button>
+  <nav id="desktop-nav" class="main-nav">
+    <div class="logo">Akshay Kumar Chouhan</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#experience">Skills</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#achievements">Achievements</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav" class="main-nav">
+    <div class="logo">Akshay Kumar Chouhan</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="index.html#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="index.html#experience" onclick="toggleMenu()">Skills</a></li>
+        <li><a href="index.html#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="index.html#achievements" onclick="toggleMenu()">Achievements</a></li>
+        <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile" class="reveal">
+    <div class="section__pic-container">
+      <img src="./assets/profile-new.jpg" alt="Akshay Kumar Chouhan - Professional headshot"
+        class="profile-img" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Akshay Kumar Chouhan</h1>
+      <p class="section__text__p2">B.Tech CSE @ VFSTR · Full-Stack Developer & Quantum Tech Enthusiast</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('https://drive.google.com/file/d/17lPSVy1CTnjp0wh70s2MfMgaWTDFn_IW/view?usp=sharing', '_blank')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='index.html#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn" class="icon"
+          onclick="location.href='https://www.linkedin.com/in/akshay-kumar-chouhan-862708286/'" />
+        <img src="./assets/github.png" alt="GitHub" class="icon"
+          onclick="location.href='https://github.com/Akshaykumarchouhan'" />
+        <img src="./assets/facebook.png" alt="Facebook" class="icon"
+          onclick="location.href='https://www.facebook.com/akshay.chouhan.336717'" />
+      </div>
+    </div>
+  </section>
+  <section id="about" class="reveal">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container about__pic-container">
+        <img src="./assets/profile-new.jpg" alt="Akshay Kumar Chouhan" class="about-pic" />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/experience.png" alt="Experience" class="icon" />
+            <h3>Experience</h3>
+            <p>Software Development · Team Leader, AQVH 2025</p>
+          </div>
+          <div class="details-container">
+            <img src="./assets/education.png" alt="Education" class="icon" />
+            <h3>Education</h3>
+            <p>B.Tech CSE, Vignan University (2022–2026)<br />CGPA: 7.7 · Guntur, AP</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>
+            I'm a Computer Science and Engineering student at Vignan's Foundation for Science, Technology & Research (VFSTR), Guntur. 
+            I build full-stack applications with React, Node.js, and MongoDB, and I'm passionate about quantum computing and AI—from 
+            RAG and LLMs to agentic systems. I've led a team at the Amravati Quantum Valley Hackathon (AQVH) 2025 and won the department 
+            hackathon at Vignan. I focus on scalable, user-centric software and love connecting with companies, developers, and students.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="experience" class="reveal">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Technical Skills</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Languages & Frontend</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Check" class="icon" />
+              <div><h3>C / C++</h3><p>Intermediate</p></div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Check" class="icon" />
+              <div><h3>JavaScript</h3><p>Experienced</p></div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Check" class="icon" />
+              <div><h3>Python</h3><p>Intermediate</p></div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Check" class="icon" />
+              <div><h3>HTML / CSS</h3><p>Experienced</p></div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Check" class="icon" />
+              <div><h3>ReactJS</h3><p>Experienced</p></div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Backend, Data & Tools</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Check" class="icon" />
+              <div><h3>Node.js / Express</h3><p>Experienced</p></div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Check" class="icon" />
+              <div><h3>MongoDB / SQL</h3><p>Experienced</p></div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Check" class="icon" />
+              <div><h3>Git & GitHub</h3><p>Experienced</p></div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Check" class="icon" />
+              <div><h3>AWS / Cloud</h3><p>Intermediate</p></div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Check" class="icon" />
+              <div><h3>RAG · NLP · LLM · LangChain</h3><p>Intermediate</p></div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Check" class="icon" />
+              <div><h3>Quantum Technology</h3><p>Learning</p></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="projects" class="reveal">
+    <p class="section__text__p1">Browse My</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+      <div class="about-containers project-cards">
+        <div class="details-container color-container">
+          <div class="article-container"><img src="./assets/project-1.png" alt="Wishes Application" class="project-img" /></div>
+          <h2 class="experience-sub-title project-title">Wishes Application</h2>
+          <p class="project-desc">Role-based institutional management system with student, staff, event & placement modules. JWT auth, CSV bulk uploads, automated WhatsApp birthday wishes. React, TypeScript, Node.js, MongoDB.</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/Akshaykumarchouhan/wishesapplication')">GitHub</button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container"><img src="./assets/project-2.png" alt="IBM Quantum Dashboard" class="project-img" /></div>
+          <h2 class="experience-sub-title project-title">IBM Quantum Dashboard</h2>
+          <p class="project-desc">Full-stack quantum computing platform: interactive circuits, tutorials, job management, real-time collaboration, IBM Quantum integration. React, Express, TypeScript.</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/Akshaykumarchouhan/IBM-Quantum-Job-Tracker')">GitHub</button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container"><img src="./assets/project-3.png" alt="Doctor Appointment System" class="project-img" /></div>
+          <h2 class="experience-sub-title project-title">Doctor Appointment Management</h2>
+          <p class="project-desc">Full-stack appointment system with RESTful APIs, role-based auth (Admin/Doctor/Patient), scheduling & tracking. Node.js, Express, MongoDB/MySQL.</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/Akshaykumarchouhan/Doctor_Appoinment_Management_System')">GitHub</button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container"><img src="./assets/project-1.png" alt="Market Scout Agent" class="project-img" /></div>
+          <h2 class="experience-sub-title project-title">Market Scout Agent</h2>
+          <p class="project-desc">Agent that takes a company name, searches for latest press releases/docs, and summarizes new technical features from the last 7 days for product teams.</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/Akshaykumarchouhan/Market_Scout_Agent')">GitHub</button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container"><img src="./assets/project-2.png" alt="Your Genie Chatbot" class="project-img" /></div>
+          <h2 class="experience-sub-title project-title">Your Genie Chatbot</h2>
+          <p class="project-desc">AI-powered chatbot. Built with JavaScript; live demo available.</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/Akshaykumarchouhan/Your_Genie_Chatbot')">GitHub</button>
+            <button class="btn btn-color-2 project-btn" onclick="window.open('https://poetic-pasca-3a4642.netlify.app/')">Live Demo</button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container"><img src="./assets/project-3.png" alt="Quantum Job Tracker" class="project-img" /></div>
+          <h2 class="experience-sub-title project-title">IBM Quantum Job Tracker</h2>
+          <p class="project-desc">Real-time dashboard to monitor quantum jobs with AI analytics. Track execution, optimize scheduling, visualize workloads for researchers and developers.</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/Akshaykumarchouhan/IBM-Quantum-Job-Tracker')">GitHub</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="more-projects">More projects on <a href="https://github.com/Akshaykumarchouhan" target="_blank" rel="noopener">GitHub</a> — To-Do List, Calculator, Blog, Student Management, E-commerce & more.</p>
+  </section>
+  <section id="achievements" class="reveal">
+    <p class="section__text__p1">Highlights</p>
+    <h1 class="title">Achievements & Certifications</h1>
+    <div class="achievements-grid">
+      <div class="details-container">
+        <h3>Achievements</h3>
+        <ul class="achievement-list">
+          <li>Semifinal winner, <strong>Amravati Quantum Valley Hackathon (AQVH) 2025</strong> — Team Leader</li>
+          <li>First prize, Department of CSE Hackathon, Vignan University</li>
+          <li>TCS CodeVita Season 13 — Round 2 Qualified</li>
+          <li>LeetCode — problem-solving practice</li>
+          <li>CodeChef — 1 star; best global rank 94371; 100+ problems solved</li>
+          <li>50% scholarship, Vignan University Undergraduate Program (2022–2026)</li>
+        </ul>
+      </div>
+      <div class="details-container">
+        <h3>Certifications & Extracurricular</h3>
+        <ul class="achievement-list">
+          <li>NPTEL — Public Speaking, Soft Skills</li>
+          <li>NPTEL — Introduction to Quantum Computing: Quantum Algorithms and Qiskit (Ongoing)</li>
+          <li>Cambridge English ESOL — Level A2 (Entry 2)</li>
+          <li>Coordinator, Technical Team — 24-Hour Web Hackathon, VFSTR</li>
+          <li>Team Leader — AQVH 2025 (Andhra Pradesh State Government)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="reveal">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email" class="icon contact-icon email-icon" />
+        <p><a href="mailto:221FA04119@vignan.ac.in">221FA04119@vignan.ac.in</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn" class="icon contact-icon" />
+        <p><a href="https://www.linkedin.com/in/akshay-kumar-chouhan-862708286/" target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/github.png" alt="GitHub" class="icon contact-icon" />
+        <p><a href="https://github.com/Akshaykumarchouhan" target="_blank" rel="noopener">GitHub</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/facebook.png" alt="Facebook" class="icon contact-icon" />
+        <p><a href="https://www.facebook.com/akshay.chouhan.336717" target="_blank" rel="noopener">Facebook</a></p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#experience">Skills</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#achievements">Achievements</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Akshay kumar chouhan</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/akshay kumar chouhan.jpg" alt="John Doe profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Akshay Kumar Chouhan</h1>
-        <p class="section__text__p2">Frontend Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('C:\Users\hp\Downloads\html-css-js-portfolio-tutorial-2-main\html-css-js-portfolio-tutorial-2-main\assets\RESUME  suman 01[1].pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/akshay-kumar-chouhan-862708286/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/Akshaykumarchouhan'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/akshay kumar chouhan.jpg"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p> <br />Frontend Development</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Tech. Bachelors Degree<br /></p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-              reprehenderit et laborum, rem, dolore eum quod voluptate
-              exercitationem nobis, nihil esse debitis maxime facere minus sint
-              delectus velit in eos quo officiis explicabo deleniti dignissimos.
-              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-              reiciendis ea magnam? Nulla, impedit fuga!
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SQL</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Bootstrap</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node.js</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:examplemail@gmail.com">ak96ktr@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2024 akshay kumar chouhan. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+    <p>Copyright &#169; 2025 Akshay Kumar Chouhan. All Rights Reserved.</p>
+  </footer>
+  <a href="#" class="back-to-top" id="back-to-top" aria-label="Back to top">↑</a>
+  <script src="script.js"></script>
+</body>
+
 </html>

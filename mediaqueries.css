@@ -7,7 +7,8 @@
     flex-wrap: wrap;
   }
   #contact,
-  #projects {
+  #projects,
+  #achievements {
     height: fit-content;
   }
 }
@@ -42,12 +43,21 @@
     height: 275px;
     margin: 0 auto 2rem;
   }
+  #about .section__pic-container.about__pic-container {
+    width: 260px;
+    height: 325px;
+  }
   .about-containers {
     margin-top: 0;
   }
 }
 
 @media screen and (max-width: 600px) {
+  .theme-toggle {
+    top: 1rem;
+    left: 1rem;
+    right: auto;
+  }
   #contact,
   footer {
     height: 40vh;
@@ -90,6 +100,10 @@
     width: auto;
     height: 46vw;
     justify-content: center;
+  }
+  #about .section__pic-container.about__pic-container {
+    width: 220px;
+    height: 280px;
   }
   .section__text__p2 {
     font-size: 1.25rem;
